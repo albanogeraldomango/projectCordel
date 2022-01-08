@@ -1,0 +1,185 @@
+@charset 'UTF-8';
+
+@font-face {
+    font-family: JosefinSans-VariableFont_wght;
+    src: url(../fontes/JosefinSans-VariableFont_wght.ttf) format('opentype');
+}
+@font-face {
+    font-family: BerkshireSwash-Regular;
+    src: url(../fontes/BerkshireSwash-Regular.ttf) format('opentype');
+}
+
+:root{
+    --font-padrao: 'JosefinSans-VariableFont_wght', cursive;
+    --font-titulo:'BerkshireSwash-Regular', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header > h1{
+    padding-top: 75px;
+    font-variant: small-caps;
+    font-family: var(--font-padrao);
+    font-size: 7vw;
+}
+header > p{
+    padding-bottom: 75px;
+    font-family: var(--font-padrao);
+    margin-top: 10px;
+}
+
+/*main{
+    max-width: 1000px;
+    margin: auto;
+}*/
+
+h1.titulo{
+    background-color: white;
+    font-family: var(--font-titulo);
+    padding-top: 50px;
+    text-indent: 30px;
+    color: black;
+    box-shadow: 3px 7px 2px black;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: var(--font-padrao);
+}
+header a:hover, footer a:hover{
+    text-decoration: underline;
+    font-family: var(--font-padrao);
+    font-size: 16pt;
+    transition: 2s;
+}
+
+strong{
+    background-color: rgba(93, 185, 32, 0.24);
+    padding: 5px;
+    padding-left: 0px;
+    border-radius: 5px;
+    color: rgb(17, 51, 4);
+}
+
+section{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    line-height: 1.5em;
+    padding-left: 30px;
+    font-family: var(--font-padrao);
+    font-size: 2.3vw;
+}
+
+section > p{
+    padding-bottom: 1.5em;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.imagem{
+    background-color: rgba(0, 0, 0, 0.589);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.555);
+    background-size: cover;
+    background-attachment: fixed;
+}
+section.imagem > p{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01{
+    background-image: url('../imagens/first03.jpg');
+    background-position: left center;
+    background-repeat: no-repeat;
+
+}
+section#normal{
+    padding-top: 2vh;
+}
+section#img02{
+    background-image: url('../imagens/secound3.jpg');
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+div.proximo{
+    margin: auto;
+    text-align: center;
+    background-color: white;
+
+}
+div.proximo > a{
+    background-image: linear-gradient(to right, green, black);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-family: var(--font-padrao);
+}
+
+div.proximo > a:hover{
+    background-image: linear-gradient(to bottom, red, black);
+    color: yellow;
+    font-family: var(--font-padrao);
+    transition: 2s;
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+@media (max-width: 704px){
+    h1.titulo{
+        background-color: white;
+        font-family: var(--font-titulo);
+        padding-top: 50px;
+        text-indent: 25px;
+        color: black;
+    }
+    section#img01{
+        background-image: url('../imagens/first02.jpg');
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+    section#img02{
+        background-image: url('../imagens/secound1.jpg');
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+}
+@media (max-width: 454px){
+    section#img01{
+        background-image: url('../imagens/first01.jpg');
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    section#img02{
+        background-image: url('../imagens/secound1.jpg');
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+}
